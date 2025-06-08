@@ -33,9 +33,10 @@ use Symfony\Component\Validator\Constraints as Assert;
     'roastLevel' => 'exact',
 ])]
 #[ApiFilter(OrderFilter::class, properties: [
-    'roaster' => 'ASC',
+    'roaster.name' => 'ASC',
     'name' => 'ASC',
-    'roastLevel' => 'ASC',
+    'roastLevel.level' => 'ASC',
+    'rating.value' => 'DESC',
 ])]
 #[GetCollection(
     normalizationContext: [
