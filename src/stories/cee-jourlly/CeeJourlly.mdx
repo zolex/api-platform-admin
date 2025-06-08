@@ -1,0 +1,22 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as CeeJourllyStories from './CeeJourlly.stories';
+
+<Meta of={CeeJourllyStories} />
+
+# Example App "Cee-Jourlly"
+
+**A Coffee Tasting Journal with a few more features than in the other stories.**
+
+For now , this is just here to demonstrate all the bugs, missing features and traffic-wasting, so "we" can work on it.\
+This is still a pretty simple app, but it shows several `api-platform/core` features which are not properly supported by `api-platform/admin`.
+
+### Hint
+
+*You may need to rebuild the php container to automatically load the cee-jourlly fixtures on container startup. Otherwise load the fixtures manually:*
+
+```bash
+docker compose exec php bin/console hautelook:fixtures:load --no-interaction
+```
+
+

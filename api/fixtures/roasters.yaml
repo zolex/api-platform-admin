@@ -1,0 +1,9 @@
+App\Entity\Roaster:
+    roaster_1:
+        name: illy
+        origin: ['@origin_2']
+        city: Trieste
+    roaster_2:
+        name: DINZLER
+        origin: [ '@origin_1' ]
+        city: Irschenberg

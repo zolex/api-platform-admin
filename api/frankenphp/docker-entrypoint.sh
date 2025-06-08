@@ -31,6 +31,10 @@ if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 		if [ "$( find ./migrations -iname '*.php' -print -quit )" ]; then
 			php bin/console doctrine:migrations:migrate --no-interaction
 		fi
+
+		if [ "$( find ./fixtures -iname '*.yaml' -print -quit )" ]; then
+			php bin/console hautelook:fixtures:load --no-interaction
+		fi
 	fi
 
 	setfacl -R -m u:www-data:rwX -m u:"$(whoami)":rwX var

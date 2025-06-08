@@ -1,0 +1,12 @@
+App\Entity\Coffee:
+    coffee_1:
+        roaster: '@roaster_1'
+        name: Classico
+        origin: ['@origin_3', '@origin_5']
+        roastLevel: '@roast_level_3'
+    coffee_2:
+        roaster: '@roaster_2'
+        name: Espresso Peru Organico
+        origin: [ '@origin_7', '@origin_8' ]
+        roastLevel: '@roast_level_3'
+        
