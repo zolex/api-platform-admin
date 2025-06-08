@@ -1,11 +1,11 @@
 import React from 'react';
-import { Edit } from 'react-admin';
 import JournalForm from './JournalForm';
+import { EditGuesser } from '../../../index';
 
 const JournalEdit = () => (
-  <Edit>
+  <EditGuesser>
     <JournalForm />
-  </Edit>
+  </EditGuesser>
 );
 
 export default JournalEdit;

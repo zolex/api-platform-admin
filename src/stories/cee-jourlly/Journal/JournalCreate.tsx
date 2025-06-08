@@ -1,11 +1,11 @@
 import React from 'react';
-import { Create } from 'react-admin';
 import JournalForm from './JournalForm';
+import { CreateGuesser } from '../../../index';
 
 const JournalCreate = () => (
-  <Create>
+  <CreateGuesser>
     <JournalForm />
-  </Create>
+  </CreateGuesser>
 );
 
 export default JournalCreate;

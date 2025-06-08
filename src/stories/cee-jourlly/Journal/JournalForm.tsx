@@ -1,12 +1,12 @@
 import React from 'react';
-import { DateInput, SimpleForm, useRecordContext } from 'react-admin';
+import { DateInput, useRecordContext } from 'react-admin';
 import { Stack, Typography } from '@mui/material';
 import InputGuesser from '../../../input/InputGuesser';
 
 const JournalForm = () => {
   const record = useRecordContext();
   return (
-    <SimpleForm sx={{ maxWidth: 1024 }}>
+    <>
       <Typography variant="h4">
         {(record && <span>Edit {record.id}</span>) ?? 'Create Journal'}
       </Typography>
@@ -30,7 +30,7 @@ const JournalForm = () => {
         <InputGuesser source="beanAge" />
         <InputGuesser source="rating" />
       </Stack>
-    </SimpleForm>
+    </>
   );
 };
 

@@ -3,7 +3,6 @@ import {
   ArrayInput,
   NumberInput,
   SelectInput,
-  SimpleForm,
   SimpleFormIterator,
   useGetList,
   useRecordContext,
@@ -16,7 +15,7 @@ const CoffeeForm = () => {
   const { data: beanTypes, isPending: beanTypesPending } =
     useGetList('bean_types');
   return (
-    <SimpleForm sx={{ maxWidth: 1024 }}>
+    <>
       <Typography variant="h4">
         {(record && <span>Edit {record.id}</span>) ?? 'Create Coffee'}
       </Typography>
@@ -43,7 +42,7 @@ const CoffeeForm = () => {
           </Stack>
         </SimpleFormIterator>
       </ArrayInput>
-    </SimpleForm>
+    </>
   );
 };
 

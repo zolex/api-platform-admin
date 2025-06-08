@@ -1,11 +1,11 @@
 import React from 'react';
-import { Edit } from 'react-admin';
 import CoffeeForm from './CoffeeForm';
+import { EditGuesser } from '../../../index';
 
 const CoffeeEdit = () => (
-  <Edit>
+  <EditGuesser>
     <CoffeeForm />
-  </Edit>
+  </EditGuesser>
 );
 
 export default CoffeeEdit;

@@ -1,11 +1,11 @@
 import React from 'react';
-import { Create } from 'react-admin';
 import CoffeeForm from './CoffeeForm';
+import { CreateGuesser } from '../../../index';
 
 const CoffeeCreate = () => (
-  <Create>
+  <CreateGuesser>
     <CoffeeForm />
-  </Create>
+  </CreateGuesser>
 );
 
 export default CoffeeCreate;
