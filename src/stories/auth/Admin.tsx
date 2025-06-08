@@ -1,6 +1,7 @@
 import React from 'react';
 import { HydraAdmin, type HydraAdminProps } from '../../hydra';
 import authProvider from './basicAuth';
+import ResourceGuesser from '../../core/ResourceGuesser';
 
 /**
  * # Protected `<HydraAdmin>`
@@ -9,7 +10,11 @@ import authProvider from './basicAuth';
  * Login with: john/123
  */
 const Admin = ({ entrypoint }: JwtAuthProps) => (
-  <HydraAdmin entrypoint={entrypoint} authProvider={authProvider} requireAuth />
+  <HydraAdmin entrypoint={entrypoint} authProvider={authProvider} requireAuth>
+    <ResourceGuesser name="books" />
+    <ResourceGuesser name="reviews" />
+    <ResourceGuesser name="greetings" />
+  </HydraAdmin>
 );
 
 export default Admin;
