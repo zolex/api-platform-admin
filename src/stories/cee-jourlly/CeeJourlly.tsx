@@ -10,11 +10,15 @@ import JournalList from './Journal/JournalList';
 import RatingList from './Ratings/RatingList';
 import RecipeList from './Recipes/RecipeList';
 import RecipeShow from './Recipes/RecipeShow';
+import DevtoolsLayout from './DevtoolsLayout';
 
 interface BasicProps extends Pick<HydraAdminProps, 'entrypoint'> {}
 
 const CeeJourlly = ({ entrypoint }: BasicProps) => (
-  <HydraAdmin entrypoint={entrypoint} title="Coffee JOURNAL">
+  <HydraAdmin
+    entrypoint={entrypoint}
+    title="Coffee JOURNAL"
+    layout={DevtoolsLayout}>
     <ResourceGuesser
       name="journals"
       list={JournalList}
